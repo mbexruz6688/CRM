@@ -33,9 +33,9 @@ class Shartnoma(models.Model):
         ("18:00-20:00", "18:00-20:00"),
     )
     shartnoma_raqami = models.PositiveSmallIntegerField()
-    student = models.ForeignKey(Student, on_delete=models.SET_NULL)
-    kurs = models.ForeignKey(Kurs, on_delete=models.SET_NULL)
-    ustoz = models.ForeignKey(Ustoz, on_delete=models.SET_NULL)
+    student = models.ForeignKey(Student, on_delete=models.SET_NULL, null=True)
+    kurs = models.ForeignKey(Kurs, on_delete=models.SET_NULL, null=True)
+    ustoz = models.ForeignKey(Ustoz, on_delete=models.SET_NULL, null=True)
     kunlari = models.CharField(max_length=30, choices=(("Dushanba-Juma", "Dushanba-Juma"), ("Seshanba-Shanba","Seshanba-Shanba")))
     kurs_vaqti = models.CharField(max_length=30, choices=K)
     guruh_nomi = models.CharField(max_length=30)
