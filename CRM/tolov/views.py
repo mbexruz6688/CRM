@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from rest_framework.generics import *
+from .models import *
+from .serializer import *
 
-# Create your views here.
+class TolovListCreateAPIView(ListCreateAPIView):
+    queryset = Tolov.objects.all()
+    serializer_class = TolovSerializer
+class TolovGetUpdateAPIView(RetrieveUpdateAPIView):
+    queryset = Tolov.objects.all()
+    serializer_class = TolovSerializer
