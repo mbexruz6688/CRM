@@ -1,6 +1,6 @@
 from django.db.models import fields
 from rest_framework.serializers import ModelSerializer
-from models import *
+from .models import *
 
 
 class TolovSerializer(ModelSerializer):
