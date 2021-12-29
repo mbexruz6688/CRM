@@ -42,3 +42,5 @@ class Tolov(models.Model):
     click = models.PositiveBigIntegerField()
     jami_tolandi = models.PositiveBigIntegerField()
     jami_qoldi = models.PositiveBigIntegerField()
+    def __str__(self):
+        return(self.shartnoma)
